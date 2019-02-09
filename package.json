@@ -1,17 +1,72 @@
 {
-  "name": "",
-  "version": "",
-  "description": "",
+  "name": "header-photos",
+  "description": "> Project description",
   "author": "",
-  "license": "",
+  "license": "ISC",
   "engines": {
     "node": ">=6.13.0"
   },
   "scripts": {
+    "test": "jest",
+    "start": "webpack-dev-server --config ./webpack.config.js --mode development",
+    "build": "webpack -d ",
+    "seed": "node schema.js",
+    "server": "nodemon server/server.js"
   },
   "dependencies": {
+    "aws-sdk": "^2.400.0",
+    "babel-jest": "^24.1.0",
+    "bluebird": "^3.5.3",
+    "express": "^4.16.4",
+    "jest-puppeteer": "^3.9.0",
+    "mysql": "^2.16.0",
+    "puppeteer": "^1.12.2",
+    "react": "^16.8.1",
+    "react-dom": "^16.8.1",
+    "request": "^2.88.0",
+    "request-promise": "^4.2.2",
+    "sprintf-js": "^1.1.2"
+  },
+  "babel": {
+    "presets": [
+      "@babel/preset-env",
+      "@babel/preset-react"
+    ],
+    "env": {
+      "test": {
+        "plugins": [
+          "transform-es2015-modules-commonjs"
+        ]
+      }
+    }
   },
   "devDependencies": {
-    "eslint-config-hackreactor": "git://github.com/reactorcore/eslint-config-hackreactor"
-  }
+    "@babel/core": "^7.2.2",
+    "@babel/preset-env": "^7.3.1",
+    "@babel/preset-react": "^7.0.0",
+    "babel-loader": "^8.0.5",
+    "babel-plugin-transform-es2015-classes": "^6.24.1",
+    "babel-plugin-transform-es2015-modules-commonjs": "^6.26.2",
+    "enzyme": "^3.8.0",
+    "enzyme-adapter-react-16": "^1.9.1",
+    "eslint-config-hackreactor": "git://github.com/reactorcore/eslint-config-hackreactor.git",
+    "faker": "^4.1.0",
+    "jest": "^24.1.0",
+    "jest-environment-enzyme": "^7.0.1",
+    "jest-enzyme": "^7.0.1",
+    "webpack": "^4.29.3",
+    "webpack-cli": "^3.2.3",
+    "webpack-dev-server": "^3.1.14"
+  },
+  "version": "1.0.0",
+  "main": ".eslintrc.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kamp-placeholders/header-photos.git"
+  },
+  "keywords": [],
+  "bugs": {
+    "url": "https://github.com/kamp-placeholders/header-photos/issues"
+  },
+  "homepage": "https://github.com/kamp-placeholders/header-photos#readme"
 }
